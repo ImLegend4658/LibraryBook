@@ -1,0 +1,99 @@
+
+html, body, main, section, h1, p, footer,figcaption, figure, div {
+	margin: 0px; 
+	padding: 0px;
+	border: 0px;
+}
+
+
+.logo{
+    margin-left: auto;
+    margin-right:auto;
+    position: relative;
+    top: 43px;
+    left: 257px;
+    height: 100px;
+    width:188px;
+     
+}
+
+body{
+    margin-left: auto;
+    margin-right: auto;
+ }
+#wrapper{
+   margin-left: 400px;
+    margin-right: 599px;
+    margin: auto;
+    height: 800px;
+    width: 760px;
+    background-color:cornsilk;
+    overflow: scroll;
+ }
+
+h1{
+    position: relative;
+    width: 500px;
+    top: -54px;
+    left: 100px;
+    align-content: center;
+}
+
+p{
+    position: relative;
+    left: 100px;
+    top: 23px;
+    width: 500px;
+    font-size:20px;
+}
+
+
+#link{
+    position: relative;
+    
+    top: 100px;
+    left: 5px;
+    font-size:22px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+}
+
+#return{
+    position: relative;
+    top: 450px;
+    font-size: 20px;
+}
+
+#Form{
+    position: relative;
+    
+    top:50px;
+    left:200px;
+    
+    width: 300px;
+}
+
+Table{
+    font-family: sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+ }
+
+#tableview{
+         overflow: scroll;
+height: 400px;
+}
+
+td, th{
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+}
+
+tr:nth-child(even){
+    background-color: #dddddd;
+}
+a:visited{color: blue;}
+a:hover{color:red;}
+ 
