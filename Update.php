@@ -10,9 +10,10 @@ $sql = "UPDATE TheBooks SET NAME='$_POST[bookname]', Authorn='$_POST[Author]', T
 //execute the qyery 
 if( mysqli_query($con,$sql))
  header("refresh:1; url=edit.php");
+ 
 else
     echo "Not updated.";
     
-
+header("location:readTheBooks.php"); //after edit, it will take you you database
 
 ?>

@@ -29,17 +29,16 @@ $records = mysqli_query($con,$sql);
         
         
     <h1>Welcome to Library web</h1>
-    <p>This page about to chose any book that  you want to read. just chose any book and enjoy to read it :) </p>
+    <p>Hello. This is edit area, just edit what do you want and click submit
+             <br> magically, it will transfer you back to Book database. :)</p>
              
               
              <div id="return">
              <a href="home.php" target="_self">Return the main page? here</a>
-                 <br><br>
-                 <a href="addBooks.php" target="_self">Add book here</a>
                  </div>
              
              <div id="tableview">
-             <table>
+             <table id="editTable">
               <tr> 
                  <th>Book Name</th>
                   <th>Author Name</th>
@@ -58,7 +57,7 @@ $records = mysqli_query($con,$sql);
                       echo "<td><input type=number name= ISBN value='".$row['ISBN']."'></td>";
                       echo "<td><input type=number name= Price value='".$row['price']."'></td>";
                       echo "<input type=hidden name=id value='".$row['id']."'></td>";
-                      echo "<td><input type=submit>";
+                      echo "<td><input type=submit value=Submit>";
                       echo "</form></tr>";
                   }
                     ?>

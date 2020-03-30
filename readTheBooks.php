@@ -15,13 +15,11 @@
         
         
     <h1>Welcome to Library web</h1>
-    <p>This page about to chose any book that  you want to read. just chose any book and enjoy to read it :) </p>
+   <P>Here to find name of book you like and also you have an access to delete or update the book name. Do you want to add name of book that is not available here? you can add by click add botton. fill out Information and it will appear here. Enjoy.</P>
              
               
              <div id="return">
-             <a href="home.php" target="_self">Return the main page? here</a>
-                 <br><br>
-                 <a href="addBooks.php" target="_self">Add book here</a>
+             <a href="home.php" target="_self">Main page here</a>
                  </div>
              
              <div id="tableview">
@@ -52,6 +50,7 @@
                         "<td> 
                         <a href=edit.php?edit>Edit</a>
                           <a href=delete.php?id=".$row['id'].">Delete</a>
+                           <a href=addBooks.php?edit>Add</a>
                           
                         </td></tr>";
                      }
@@ -63,7 +62,7 @@
                  
 //                            
 //                         }
-//                        //header("location: readTheBooks.php");
+                        //header("location: readTheBooks.php");
                  $conn-> close();
                  
 //              

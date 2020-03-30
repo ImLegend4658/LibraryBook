@@ -17,14 +17,13 @@
         
         
     <h1>Welcome to Library web</h1>
-    <p>Here you can add many books as you can <br> All you have to do is writing:</p>
-      <p>Book name, Authoer name, ISBN, types of book and price of it.</p>
+    <p>On this section, you can add the book that is not available on the library database, please fill out information and click save to save it. </p>
              
               
              <div id="return">
-             <a href="home.php" target="_self">Return the main page? here</a>
+             <a href="home.php" target="_self">Main page? here</a>
             <br><br>
-                 <a href="readTheBooks.php" target="_self">here to read the book</a>
+                 <a href="readTheBooks.php" target="_self">Book database here</a>
                  </div>
              
              
@@ -57,6 +56,7 @@
                  <?php else: ?>
                  <button type="submit" name="update">update </button>
                  <?php endif; ?>
+                 
                  
              </form></div>
              

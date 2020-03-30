@@ -29,13 +29,14 @@ echo "Connection Successfully";
 
 $sql = "INSERT INTO TheBooks (NAME,Authorn,TYPE,ISBN,Price) VALUES ('$BookName','$AuthorName','$Type','$ISBN','$Price')";
 
- //   header('location:addBooks.php'); // redirect to this file after submit
+//   header('location:readTheBooks.php'); // redirect to this file after submit
 if ($conn->query($sql) === TRUE){
      echo "New Record created successfully";
 }else
 {
     echo"Error" . $sql . "<br>" . $conn->error;
 }
- 
+//    header('location:readTheBooks.php'); // redirect to this file after submit
+
 $conn->close();
  
