@@ -1,6 +1,7 @@
 <?php
 //include("delete.php");
  include("addBooks.php");
+include("edit.php");
 $id =$_POST[('id')];
 $BookName =$_POST[('BookName')];
 $AuthorName =$_POST[('AuthorName')];

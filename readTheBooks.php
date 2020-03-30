@@ -1,5 +1,4 @@
 
-
 <!doctype html>
 <html>
 <head>
@@ -33,7 +32,7 @@
                   <th>Type</th>
                   <th>ISBN</th>
                   <th>Price</th>
-                  <th colspan="2">Update</th>
+                  <th>Update</th>
                  </tr>
                  
                  <?php 
@@ -51,7 +50,7 @@
 
                     echo "<tr><td>". $row["NAME"] ."</td><td>". $row["Authorn"] . "</td><td>". $row["TYPE"] ."</td><td>". $row["ISBN"] ."</td><td>". $row["Price"] ."</td> ".
                         "<td> 
-                        <a href='Submit.php?edit=<?php echo \$row['id'];' ?>Edit</a>
+                        <a href=edit.php?edit>Edit</a>
                           <a href=delete.php?id=".$row['id'].">Delete</a>
                           
                         </td></tr>";
@@ -67,19 +66,7 @@
 //                        //header("location: readTheBooks.php");
                  $conn-> close();
                  
-//                 if(isset($_POST['edit'])){
-//                     $id = $_POST['edit'];
-//                     $edit_state = true;
-//                      $sql = "SELECT * FROM TheBooks WHERE id=$id";
-//                     $record = mysqli_fetch_array($sql);
-//                     $BookName = $record['BookName'];
-//                     $AuthorName = $record['$AuthorName'];
-//                     $Type = $record['Type'];
-//                     $ISBN = $record['ISBN'];
-//                     $Price = $record['Price'];
-//                     $id = $record['id'];
-//                 }
-                 
+//              
                     ?>
              </table>
              </div>
