@@ -8,6 +8,8 @@
     
     <body>
          <div id="wrapper"> 
+ 
+             
         <div class="logo">
         <img src="/test/pic/book-2943383_640.png" alt="logo library" width="200">
         </div>
@@ -20,7 +22,8 @@
               
              <div id="return">
              <a href="home.php" target="_self">Return the main page? here</a>
-                 
+            <br><br>
+                 <a href="readTheBooks.php" target="_self">here to read the book</a>
                  </div>
              
              
@@ -28,7 +31,9 @@
              
              <div id="Form"> 
              <form action="Submit.php" method="POST">
-              <input type="hidden" name="id" value="<?php  echo (isset($id)&&!empty($id)) ? $id : '';?>"/>
+              
+                 <input type="hidden" name="id" value="<?php  echo $id?>">
+                 <br>
              <label>  Book Name: </label><br>
               <input type="text" name="BookName" value="<?php echo (isset($BookName)&&!empty($BookName)) ? $BookName : ''; ?>" >
               <br>
@@ -47,9 +52,9 @@
                  <?php 
                  $edit_state = false;
                  if($edit_state == false ): ?>
-                 <button type="submit" value="Submit"> Save </button>
+                 <button type="submit" name="Submit"> Save </button>
                  <?php else: ?>
-                 <button type="submit" value="update">update </button>
+                 <button type="submit" name="update">update </button>
                  <?php endif; ?>
                  
              </form></div>

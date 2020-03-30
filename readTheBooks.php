@@ -21,12 +21,13 @@
               
              <div id="return">
              <a href="home.php" target="_self">Return the main page? here</a>
-                 
+                 <br><br>
+                 <a href="addBooks.php" target="_self">Add book here</a>
                  </div>
              
              <div id="tableview">
              <table>
-              <tr>
+              <tr> 
                  <th>Book Name</th>
                   <th>Author Name</th>
                   <th>Type</th>
@@ -36,12 +37,13 @@
                  </tr>
                  
                  <?php 
-                    $conn = mysqli_connect("localhost","root","","Library");
+                  
+                      $conn = mysqli_connect("localhost","root","","Library");
                     if ($conn-> connect_error){ 
                     die("connect failed". $conn-> connect_error);
                     }
 
-                    $sql = "SELECT NAME,Authorn,TYPE,ISBN,Price from TheBooks";
+                    $sql = "SELECT id, NAME,Authorn,TYPE,ISBN,Price from TheBooks";
                     $result = $conn-> query($sql);
 
                     if($result-> num_rows > 0){
@@ -50,26 +52,33 @@
                     echo "<tr><td>". $row["NAME"] ."</td><td>". $row["Authorn"] . "</td><td>". $row["TYPE"] ."</td><td>". $row["ISBN"] ."</td><td>". $row["Price"] ."</td> ".
                         "<td> 
                         <a href='Submit.php?edit=<?php echo \$row['id'];' ?>Edit</a>
-                          <a href='Submit.php?edit=<?php echo \$row['id'];' ?>Delete</a>
+                          <a href=delete.php?id=".$row['id'].">Delete</a>
+                          
                         </td></tr>";
-                    }
+                     }
                         echo "</table>";
                     } else {
                         echo "0 result";
                     }
+                 
+                 
+//                            
+//                         }
+//                        //header("location: readTheBooks.php");
                  $conn-> close();
                  
-                 if(isset($_POST['edit'])){
-                     $id = $_POST['edit'];
-                      $rec = mysqli_query($db, "SELECT * FROM TheBooks WHERE id=$id");
-                     $record = mysqli_fetch_array($rec);
-                     $BookName = $record['BookName'];
-                     $AuthorName = $record['$AuthorName'];
-                     $Type = $record['Type'];
-                     $ISBN = $record['ISBN'];
-                     $Price = $record['Price'];
-                     $id = $record['id'];
-                 }
+//                 if(isset($_POST['edit'])){
+//                     $id = $_POST['edit'];
+//                     $edit_state = true;
+//                      $sql = "SELECT * FROM TheBooks WHERE id=$id";
+//                     $record = mysqli_fetch_array($sql);
+//                     $BookName = $record['BookName'];
+//                     $AuthorName = $record['$AuthorName'];
+//                     $Type = $record['Type'];
+//                     $ISBN = $record['ISBN'];
+//                     $Price = $record['Price'];
+//                     $id = $record['id'];
+//                 }
                  
                     ?>
              </table>

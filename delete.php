@@ -1,19 +1,16 @@
 <?php
 
- $conn = mysqli_connect("localhost","root","","Library");
-                    if ($conn-> connect_error){ 
-                    die("connect failed". $conn-> connect_error);
-                    }
+ $con = mysqli_connect("localhost","root","","Library");
+ mysqli_select_db($con,'Library');
 
-        //delete the table..
-$ISBN =$_GET['ISBN'];
+//select query
+$sql = "DELETE FROM TheBooks WHERE id='$_GET[id]'";
 
-        $result = mysqli_query($mysqli, "DELETE FROM TheBooks WHERE ISBN='$ISBN'");
-        
-        header("Location: readTheBooks.php");
-    }
-    
-    //NAME,Authorn,TYPE,ISBN,Price
-}
+//execute the qyery 
+
+if(mysqli_query($con,$sql))
+    header("refresh:1; url=readTheBooks.php");
+else
+    echo "not deleted";
 
 ?>
